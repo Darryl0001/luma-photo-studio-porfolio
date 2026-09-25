@@ -344,7 +344,7 @@ export default function Hero() {
 
               {/* Navigation */}
               <nav className="flex flex-col pt-10">
-                {navLinks.map((link, index) => (
+                {navLinks.map((link) => (
                   <motion.a
                     key={link.href}
                     variants={mobileNavItemVariants}
@@ -367,7 +367,7 @@ export default function Hero() {
                   >
                     <span>{link.label}</span>
 
-             
+                  
                   </motion.a>
                 ))}
               </nav>
