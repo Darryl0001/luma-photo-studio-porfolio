@@ -291,36 +291,121 @@ export default function Hero() {
               initial="hidden"
               animate="show"
               exit="exit"
-              className="fixed inset-x-0 top-0 bottom-0 z-40 flex flex-col justify-between bg-[#F9F8F6] p-6 pt-20 backdrop-blur-md md:hidden"
+              className="
+                fixed
+                inset-0
+                z-50
+                flex
+                flex-col
+                bg-[#F9F8F6]
+                px-5
+                pb-6
+                pt-5
+                sm:px-6
+                sm:pt-6
+                md:hidden
+              "
             >
-              <nav className="flex flex-col pt-4">
+              {/* Mobile Menu Header */}
+              <div className="flex items-center justify-between">
+                <a
+                  href="/"
+                  onClick={() => setIsMenuOpen(false)}
+                  className="
+                    font-['Space_Grotesk']
+                    text-[16px]
+                    font-medium
+                    tracking-[-0.05em]
+                  "
+                >
+                  LUMA / PHOTO
+                </a>
+
+                <button
+                  type="button"
+                  onClick={() => setIsMenuOpen(false)}
+                  aria-label="Close menu"
+                  className="
+                    flex
+                    h-11
+                    w-11
+                    items-center
+                    justify-center
+                    border
+                    border-[#1A1A1A]/15
+                    transition-colors
+                    hover:bg-[#1A1A1A]
+                    hover:text-[#F9F8F6]
+                  "
+                >
+                  <X size={18} strokeWidth={1.5} />
+                </button>
+              </div>
+
+              {/* Navigation */}
+              <nav className="flex flex-col pt-10">
                 {navLinks.map((link, index) => (
                   <motion.a
                     key={link.href}
                     variants={mobileNavItemVariants}
                     href={link.href}
                     onClick={() => setIsMenuOpen(false)}
-                    className="flex items-center justify-between border-b border-[#1A1A1A]/10 py-4 font-['Space_Grotesk'] text-2xl font-medium tracking-tight text-[#1A1A1A]"
+                    className="
+                      flex
+                      min-h-16
+                      items-center
+                      justify-between
+                      border-b
+                      border-[#1A1A1A]/10
+                      py-4
+                      font-['Space_Grotesk']
+                      text-2xl
+                      font-medium
+                      tracking-[-0.04em]
+                      text-[#1A1A1A]
+                    "
                   >
                     <span>{link.label}</span>
-                    <span className="font-mono text-xs font-normal text-[#1A1A1A]/40">
-                      0{index + 1}
-                    </span>
+
+             
                   </motion.a>
                 ))}
               </nav>
 
+              {/* Bottom CTA */}
               <motion.div
                 variants={mobileNavItemVariants}
-                className="pb-8 pt-6"
+                className="mt-auto pt-8"
               >
                 <a
                   href="#contact"
                   onClick={() => setIsMenuOpen(false)}
-                  className="flex w-full items-center justify-between border-b border-[#1A1A1A] pb-2 text-base font-medium"
+                  className="
+                    group
+                    flex
+                    min-h-11
+                    w-full
+                    items-center
+                    justify-between
+                    border-b
+                    border-[#1A1A1A]
+                    pb-2
+                    text-base
+                    font-medium
+                  "
                 >
                   <span>Work with us</span>
-                  <ArrowUpRight size={18} strokeWidth={1.5} />
+
+                  <ArrowUpRight
+                    size={18}
+                    strokeWidth={1.5}
+                    className="
+                      transition-transform
+                      duration-300
+                      group-hover:-translate-y-1
+                      group-hover:translate-x-1
+                    "
+                  />
                 </a>
               </motion.div>
             </motion.div>
