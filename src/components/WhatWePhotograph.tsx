@@ -112,9 +112,7 @@ export default function WhatWePhotograph() {
                   className="group flex min-h-[76px] w-full items-center justify-between gap-4 py-4 text-left sm:min-h-[86px] sm:py-5 md:min-h-0 md:gap-6 md:py-6"
                 >
                   <div className="flex min-w-0 items-baseline gap-3 sm:gap-5 md:gap-8">
-                    <span className="shrink-0 font-mono text-[10px] text-[#1A1A1A]/35 sm:text-xs">
-                      0{index + 1}
-                    </span>
+            
 
                     <h3 className="min-w-0 font-['Space_Grotesk'] text-[clamp(2.15rem,10vw,5.2rem)] font-medium leading-[0.9] tracking-[-0.07em] transition-opacity duration-150 group-hover:opacity-70 sm:text-[clamp(2.7rem,7vw,5.2rem)]">
                       {service.title}
