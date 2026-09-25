@@ -1,0 +1,497 @@
+import React from "react";
+import {
+  ArrowDown,
+  ArrowUpRight,
+  Mail,
+  MapPin,
+} from "lucide-react";
+
+const work = [
+  {
+    image:
+      "https://images.unsplash.com/photo-1515886657613-9f3515b0c78f?auto=format&fit=crop&w=1400&q=90",
+    title: "Quiet Forms",
+    category: "Editorial",
+    year: "2026",
+    className: "md:col-span-7",
+  },
+  {
+    image:
+      "https://images.unsplash.com/photo-1483985988355-763728e1935b?auto=format&fit=crop&w=1200&q=90",
+    title: "After Hours",
+    category: "Fashion",
+    year: "2026",
+    className: "md:col-span-5 md:mt-32",
+  },
+  {
+    image:
+      "https://images.unsplash.com/photo-1496747611176-843222e1e57c?auto=format&fit=crop&w=1400&q=90",
+    title: "Soft Structures",
+    category: "Portrait",
+    year: "2025",
+    className: "md:col-span-5",
+  },
+  {
+    image:
+      "https://images.unsplash.com/photo-1529139574466-a303027c1d8b?auto=format&fit=crop&w=1400&q=90",
+    title: "In Between",
+    category: "Campaign",
+    year: "2025",
+    className: "md:col-span-7 md:mt-24",
+  },
+];
+
+const services = [
+  {
+    number: "01",
+    title: "Editorial",
+    description:
+      "Portraits and visual stories built around a clear mood, location, and point of view.",
+  },
+  {
+    number: "02",
+    title: "Commercial",
+    description:
+      "Campaign imagery for brands that want photographs with character, not just product coverage.",
+  },
+  {
+    number: "03",
+    title: "Portraits",
+    description:
+      "Personal portraits that feel considered, natural, and unmistakably yours.",
+  },
+  {
+    number: "04",
+    title: "Events",
+    description:
+      "Honest documentation of launches, gatherings, and moments worth keeping.",
+  },
+];
+
+export default function App() {
+  return (
+    <main className="min-h-screen bg-[#F7F5F0] text-[#171717] selection:bg-[#C85A32] selection:text-white">
+      {/* NAVIGATION */}
+      <header className="fixed left-0 top-0 z-50 w-full mix-blend-difference text-white">
+        <div className="mx-auto flex max-w-[1600px] items-center justify-between px-5 py-5 md:px-8">
+          <a
+            href="#"
+            className="font-mono text-sm tracking-[-0.04em]"
+          >
+            STUDIO / 01
+          </a>
+
+          <nav className="hidden items-center gap-8 text-xs uppercase tracking-[0.14em] md:flex">
+            <a href="#work" className="transition-opacity hover:opacity-50">
+              Work
+            </a>
+            <a href="#studio" className="transition-opacity hover:opacity-50">
+              Studio
+            </a>
+            <a href="#services" className="transition-opacity hover:opacity-50">
+              Services
+            </a>
+          </nav>
+
+          <a
+            href="#contact"
+            className="flex items-center gap-2 text-xs uppercase tracking-[0.14em]"
+          >
+            Contact
+            <ArrowUpRight size={14} strokeWidth={1.5} />
+          </a>
+        </div>
+      </header>
+
+      {/* HERO */}
+      <section className="relative flex min-h-screen flex-col overflow-hidden">
+        <div className="absolute inset-0">
+          <img
+            src="https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&w=2200&q=90"
+            alt="Portrait photographed by the studio"
+            className="h-full w-full object-cover"
+          />
+
+          <div className="absolute inset-0 bg-black/20" />
+        </div>
+
+        <div className="relative z-10 mt-auto px-5 pb-8 pt-32 text-white md:px-8 md:pb-10">
+          <div className="mx-auto max-w-[1600px]">
+            <div className="mb-8 flex items-end justify-between">
+              <p className="max-w-[300px] text-xs uppercase leading-relaxed tracking-[0.14em]">
+                Independent photography
+                <br />
+                studio / Philippines
+              </p>
+
+              <p className="hidden font-mono text-xs md:block">
+                07°52′N / 125°07′E
+              </p>
+            </div>
+
+            <h1 className="max-w-[1200px] font-['Space_Grotesk'] text-[15vw] font-medium leading-[0.78] tracking-[-0.075em] md:text-[11vw]">
+              Pictures
+              <br />
+              with a point
+              <br />
+              of view.
+            </h1>
+
+            <div className="mt-10 flex items-center justify-between border-t border-white/40 pt-4">
+              <span className="text-xs uppercase tracking-[0.15em]">
+                Portrait / Editorial / Commercial
+              </span>
+
+              <a
+                href="#work"
+                className="flex items-center gap-3 text-xs uppercase tracking-[0.15em]"
+              >
+                Explore work
+                <ArrowDown size={15} strokeWidth={1.5} />
+              </a>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* INTRO */}
+      <section id="studio" className="px-5 py-28 md:px-8 md:py-44">
+        <div className="mx-auto grid max-w-[1600px] gap-16 md:grid-cols-12">
+          <div className="md:col-span-4">
+            <p className="font-mono text-xs text-[#C85A32]">
+              01 / THE STUDIO
+            </p>
+          </div>
+
+          <div className="md:col-span-7 md:col-start-6">
+            <h2 className="font-['Space_Grotesk'] text-4xl font-medium leading-[1.02] tracking-[-0.045em] md:text-7xl">
+              We make photographs
+              <br />
+              that have somewhere
+              <br />
+              to go.
+            </h2>
+
+            <p className="mt-10 max-w-xl text-base leading-7 text-black/60 md:text-lg">
+              For brands, people, and ideas that deserve more than a
+              photograph that simply looks good. We work with light,
+              movement, place, and personality to make images that feel
+              specific to the people behind them.
+            </p>
+
+            <a
+              href="#contact"
+              className="mt-10 inline-flex items-center gap-3 border-b border-black pb-2 text-sm uppercase tracking-[0.12em]"
+            >
+              Start a project
+              <ArrowUpRight size={15} strokeWidth={1.5} />
+            </a>
+          </div>
+        </div>
+      </section>
+
+      {/* WORK */}
+      <section id="work" className="px-5 pb-32 md:px-8 md:pb-48">
+        <div className="mx-auto max-w-[1600px]">
+          <div className="mb-16 flex items-end justify-between border-b border-black/15 pb-4">
+            <div>
+              <p className="font-mono text-xs text-[#C85A32]">
+                02 / SELECTED WORK
+              </p>
+            </div>
+
+            <span className="text-xs uppercase tracking-[0.14em] text-black/50">
+              2025—2026
+            </span>
+          </div>
+
+          <div className="grid grid-cols-1 gap-x-8 gap-y-20 md:grid-cols-12 md:gap-y-32">
+            {work.map((item) => (
+              <article
+                key={item.title}
+                className={`group ${item.className}`}
+              >
+                <div className="overflow-hidden bg-[#E7E3DA]">
+                  <img
+                    src={item.image}
+                    alt={item.title}
+                    className="aspect-[4/5] w-full object-cover transition-transform duration-700 ease-out group-hover:scale-[1.025]"
+                  />
+                </div>
+
+                <div className="mt-4 flex items-start justify-between border-t border-black/15 pt-3">
+                  <div>
+                    <h3 className="text-sm">{item.title}</h3>
+                    <p className="mt-1 text-xs text-black/50">
+                      {item.category}
+                    </p>
+                  </div>
+
+                  <span className="font-mono text-xs text-black/40">
+                    {item.year}
+                  </span>
+                </div>
+              </article>
+            ))}
+          </div>
+
+          <div className="mt-24 flex justify-end">
+            <a
+              href="#contact"
+              className="group flex items-center gap-3 text-sm uppercase tracking-[0.12em]"
+            >
+              View selected archive
+              <span className="transition-transform group-hover:translate-x-1">
+                →
+              </span>
+            </a>
+          </div>
+        </div>
+      </section>
+
+      {/* STATEMENT */}
+      <section className="bg-[#171717] px-5 py-28 text-[#F7F5F0] md:px-8 md:py-44">
+        <div className="mx-auto max-w-[1600px]">
+          <div className="grid gap-16 md:grid-cols-12">
+            <div className="md:col-span-3">
+              <p className="font-mono text-xs text-[#C85A32]">
+                03 / APPROACH
+              </p>
+            </div>
+
+            <div className="md:col-span-8 md:col-start-5">
+              <p className="font-['Space_Grotesk'] text-4xl leading-[1.02] tracking-[-0.045em] md:text-7xl">
+                Not every photograph
+                <br />
+                needs to be perfect.
+                <br />
+                It needs to feel true.
+              </p>
+
+              <div className="mt-16 grid gap-8 border-t border-white/20 pt-6 md:grid-cols-2">
+                <p className="text-sm leading-6 text-white/50">
+                  We keep the process collaborative. Before the camera comes
+                  out, we talk about what the images need to say, who they
+                  need to reach, and where they will live.
+                </p>
+
+                <p className="text-sm leading-6 text-white/50">
+                  Then we make the photographs around that idea. Sometimes
+                  carefully directed. Sometimes completely unscripted.
+                  Usually somewhere in between.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* SERVICES */}
+      <section id="services" className="px-5 py-28 md:px-8 md:py-40">
+        <div className="mx-auto max-w-[1600px]">
+          <div className="mb-20 grid gap-10 md:grid-cols-12">
+            <div className="md:col-span-4">
+              <p className="font-mono text-xs text-[#C85A32]">
+                04 / SERVICES
+              </p>
+            </div>
+
+            <div className="md:col-span-6 md:col-start-6">
+              <h2 className="font-['Space_Grotesk'] text-4xl tracking-[-0.04em] md:text-6xl">
+                Bring us the idea.
+              </h2>
+
+              <p className="mt-6 max-w-lg text-sm leading-6 text-black/55">
+                From a single portrait to a full campaign, the scope changes.
+                The attention doesn't.
+              </p>
+            </div>
+          </div>
+
+          <div className="border-t border-black/15">
+            {services.map((service) => (
+              <div
+                key={service.number}
+                className="grid border-b border-black/15 py-7 md:grid-cols-12 md:items-center md:py-10"
+              >
+                <span className="font-mono text-xs text-black/40 md:col-span-2">
+                  {service.number}
+                </span>
+
+                <h3 className="mt-4 font-['Space_Grotesk'] text-3xl tracking-[-0.04em] md:col-span-4 md:mt-0 md:text-5xl">
+                  {service.title}
+                </h3>
+
+                <p className="mt-5 max-w-md text-sm leading-6 text-black/55 md:col-span-4 md:col-start-8 md:mt-0">
+                  {service.description}
+                </p>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* FEATURED PROJECT */}
+      <section className="px-5 pb-32 md:px-8 md:pb-48">
+        <div className="mx-auto max-w-[1600px]">
+          <div className="mb-5 flex items-center justify-between">
+            <p className="font-mono text-xs text-[#C85A32]">
+              05 / FEATURED
+            </p>
+
+            <span className="text-xs uppercase tracking-[0.14em] text-black/40">
+              Campaign / 2026
+            </span>
+          </div>
+
+          <div className="relative overflow-hidden">
+            <img
+              src="https://images.unsplash.com/photo-1525507119028-ed4c629a60a3?auto=format&fit=crop&w=2200&q=90"
+              alt="Featured campaign"
+              className="aspect-[16/9] w-full object-cover"
+            />
+
+            <div className="absolute inset-x-0 bottom-0 p-5 md:p-8">
+              <div className="flex items-end justify-between text-white">
+                <h2 className="font-['Space_Grotesk'] text-4xl tracking-[-0.05em] md:text-7xl">
+                  Common Ground
+                </h2>
+
+                <ArrowUpRight
+                  className="hidden md:block"
+                  size={28}
+                  strokeWidth={1}
+                />
+              </div>
+            </div>
+          </div>
+
+          <div className="mt-6 grid gap-6 md:grid-cols-12">
+            <p className="text-sm text-black/50 md:col-span-3">
+              Fashion / Campaign
+            </p>
+
+            <p className="max-w-xl text-sm leading-6 text-black/60 md:col-span-6 md:col-start-5">
+              A campaign built around movement, texture, and the quiet
+              confidence of everyday clothing.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      {/* ABOUT */}
+      <section className="border-t border-black/15 px-5 py-28 md:px-8 md:py-40">
+        <div className="mx-auto grid max-w-[1600px] gap-16 md:grid-cols-12">
+          <div className="md:col-span-4">
+            <p className="font-mono text-xs text-[#C85A32]">
+              06 / WHO WE ARE
+            </p>
+          </div>
+
+          <div className="md:col-span-7 md:col-start-6">
+            <div className="grid gap-10 md:grid-cols-2">
+              <img
+                src="https://images.unsplash.com/photo-1551836022-d5d88e9218df?auto=format&fit=crop&w=1000&q=90"
+                alt="Photographer working in studio"
+                className="aspect-[3/4] w-full object-cover"
+              />
+
+              <div className="flex flex-col justify-end">
+                <h2 className="font-['Space_Grotesk'] text-4xl leading-[1.02] tracking-[-0.04em] md:text-5xl">
+                  Small studio.
+                  <br />
+                  Big attention
+                  <br />
+                  to detail.
+                </h2>
+
+                <p className="mt-8 text-sm leading-6 text-black/55">
+                  We're an independent photography studio working with
+                  people, brands, and creative teams across the Philippines
+                  and beyond.
+                </p>
+
+                <p className="mt-5 text-sm leading-6 text-black/55">
+                  No giant production machine. No unnecessary layers.
+                  Just a small team focused on making the right images.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* CONTACT */}
+      <section
+        id="contact"
+        className="bg-[#C85A32] px-5 py-28 text-[#F7F5F0] md:px-8 md:py-40"
+      >
+        <div className="mx-auto max-w-[1600px]">
+          <p className="font-mono text-xs opacity-70">
+            07 / LET'S MAKE SOMETHING
+          </p>
+
+          <div className="mt-16 grid gap-16 md:grid-cols-12">
+            <div className="md:col-span-9">
+              <h2 className="font-['Space_Grotesk'] text-[14vw] font-medium leading-[0.8] tracking-[-0.075em] md:text-[10vw]">
+                Have a project
+                <br />
+                in mind?
+              </h2>
+            </div>
+
+            <div className="flex flex-col justify-end md:col-span-3">
+              <p className="mb-8 max-w-xs text-sm leading-6 opacity-80">
+                Tell us what you're working on, when you need it, and what
+                you're hoping the photographs will do.
+              </p>
+
+              <a
+                href="mailto:hello@studio01.com"
+                className="group flex items-center justify-between border-b border-white/50 pb-4 text-sm uppercase tracking-[0.12em]"
+              >
+                hello@studio01.com
+                <ArrowUpRight
+                  size={18}
+                  strokeWidth={1.5}
+                  className="transition-transform group-hover:translate-x-1 group-hover:-translate-y-1"
+                />
+              </a>
+            </div>
+          </div>
+
+          <div className="mt-28 grid gap-8 border-t border-white/30 pt-6 text-xs md:grid-cols-3">
+            <div className="flex items-center gap-2">
+              <MapPin size={14} strokeWidth={1.5} />
+              Philippines
+            </div>
+
+            <a
+              href="mailto:hello@studio01.com"
+              className="flex items-center gap-2 hover:opacity-70"
+            >
+              <Mail size={14} strokeWidth={1.5} />
+              hello@studio01.com
+            </a>
+
+            <a
+              href="#"
+              className="flex items-center gap-2 hover:opacity-70 md:justify-end"
+            >
+              Instagram
+            </a>
+          </div>
+        </div>
+      </section>
+
+      {/* FOOTER */}
+      <footer className="bg-[#171717] px-5 py-5 text-white md:px-8">
+        <div className="mx-auto flex max-w-[1600px] items-center justify-between text-xs text-white/40">
+          <span>© 2026 Studio / 01</span>
+
+          <span className="font-mono">PH / 07°52′N</span>
+        </div>
+      </footer>
+    </main>
+  );
+}
